@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-116931097-1"></script>
+<
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  
+<style>
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius:5%;
+
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: powderblue;
+    color:red;
+}
+header
+{
+  background-color:black;
+  color:white;
+  padding:8px;
+  font-size:50px;
+}
+#he
+{
+  background-color:gray;
+}
+body
+{
+  background-image:linear-gradient(blue,yellow);
+}
+</style>
+<script>
+function add()
+{
+var a=document.getElementById("f1");
+var r1=/[a-zA-Z]+$/;
+if(r1.test(a.value)==false)
+{    
+     document.getElementById("l1").style.color="red";
+     document.getElementById("l1").style.fontSize=20;
+     document.getElementById("l1").innerHTML="in valid";
+     
+     return false;     
+}
+else
+{
+    
+     document.getElementById("l1").style.color="green";
+     document.getElementById("l1").style.fontSize=20;
+     document.getElementById("l1").innerHTML=" valid";
+     return true;    
+}
+}
+
+function add1()
+{
+var a=document.getElementById("f2");
+var r1=/[1-9]{1,2}$/;
+if(r1.test(a.value)==false)
+{    
+  
+     document.getElementById("l2").style.color="red";
+     document.getElementById("l2").style.fontSize=20;
+     document.getElementById("l2").innerHTML="in valid";
+     return false;     
+}
+else
+{   
+
+     document.getElementById("l2").style.color="green";
+     document.getElementById("l2").style.fontSize=20;
+     document.getElementById("l2").innerHTML=" valid";
+     return true;    
+}
+
+}
+  function sub()
+  {
+    alert("submit successful");
+  }
+  
+function add3()
+{
+var a=document.getElementById("f3");
+var r1=/[@.com]{1,2}$/;
+if(r1.test(a.value)==false)
+{
+     document.getElementById("l3").style.color="red";
+     document.getElementById("l3").style.fontSize=20;
+     document.getElementById("l3").innerHTML="in valid";
+     return false;     
+}
+else
+{
+     document.getElementById("l3").style.color="green";
+     document.getElementById("l3").style.fontSize=20;
+     document.getElementById("l3").innerHTML=" valid";
+     return true;    
+}
+}
+function add4()
+{
+  var q=document.getElementById("f2");
+var r2=/[1-9]{1,2}$/;
+if(r2.test(q.value)==false)
+{    
+  
+     document.getElementById("l4").style.color="red";
+     document.getElementById("l4").style.fontSize=20;
+     document.getElementById("l4").innerHTML="in valid";
+     return false;     
+}
+else
+{   
+
+     document.getElementById("l4").style.color="green";
+     document.getElementById("l4").style.fontSize=20;
+     document.getElementById("l4").innerHTML=" valid";
+     return true;    
+}
+}
+function feed()
+{
+  document.getElementById("f5").style.color="red";
+  document.getElementById("f5").style.fontSize=50;
+  document.getElementById("f5").innerHTML="Fill more than 50 words in feedback";
+}
+
+</script>
+</head>
+<body>
+<header><center>Website creations</center></header>
+
+<he id="he">
+<div class="dropdown">
+  <button class="dropbtn">home</button>
+  <div class="dropdown-content" style="left:0;">
+    <a href="#">india</a>
+    <a href="#">america</a>
+    <a href="#">china</a>
+    <a href="#">russia</a>
+  </div>
+   </div>
+
+<div class="dropdown">
+  <button class="dropbtn">state</button>
+  <div class="dropdown-content">
+    <a href="#">Tamil nadu</a>
+    <a href="#">Maharastra</a>
+    <a href="#">Bengalaur</a>
+    <a href="#">Mumbai</a>
+  </div></div>
+  
+<div class="dropdown">
+  <button class="dropbtn">distics</button>
+  <div class="dropdown-content">
+    <a href="#">Salem</a>
+    <a href="#">Erode</a>
+    <a href="#">Kovai</a>
+  </div></div>
+  
+<div class="dropdown">
+  <button class="dropbtn">clients</button>
+  <div class="dropdown-content">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+</div></br></he>
+<div style="padding:30px;"></div>
+User name<input id="f1" placeholder="name" onKeyup="add()"><button id="l1" ></button>(* must be character only)</br>
+<p style="padding:3px;"></p>
+password:<input id="f2" placeholder="password" onKeyup="add1()" pattern="[1-9]{3}" title="check the number"><button id="l2"></button>(* must be Number only)</br>
+  <p style="padding:3px;"></p>
+Phone no:<input id="f4" placeholder="conform password" onKeyup="add4()" title="check the number"><button id="l4"></button>(* must be Number only)</br>
+<p style="padding:5px;"></p>
+Email<input id="f3" placeholder="email" onKeyup="add3()" style="width:400px;"><button id="l3"></button></br>
+<font color="white">Customer Feedback</font></br>
+<input placeholder="feed back" onKeyup="feed()" style="width:600px;height:200px;"><label id="f5"></label>
+<p style="padding:2px;"></p><center>
+<button onclick="sub()" style="background-color:red;color:white;">submit</button></center>
+
+</body>
+</html>
