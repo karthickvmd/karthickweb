@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.12.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+  <style>
+  body
+  {
+    background-image:linear-gradient(white);
+    width:100px;
+    height:100px;
+  }
+  #f1
+  {
+    padding:460px;
+    width:200px;
+    height:200px;
+  }
+</style>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script>
+   	var letters="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+   	function ran(max)
+   	{
+   		var randomNum=Math.random();
+   		var NumberExpected =randomNum * max;
+   		var numfloored = Math.floor(NumberExpected);
+   		return numfloored;
+      
+   	}
+   	function letterpick()
+   	{
+   		var random25az=ran(letters.length);
+   		var randomletter=letters.charAt(random25az);
+   		return randomletter;
+   	}
+
+   	function positionpick()
+   	{
+        var span=$("<span/>");
+        span.css("position","absolute");
+        var rx=ran(100)+"%";
+        span.css("left",rx);
+        span.css("top",0);
+        span.text(letterpick());
+        span.appendTo("body");
+        return span;
+
+   	}
+   	function makeLetterFall()
+   	{
+   		var letterElement = positionpick();
+   		letterElement.css("color","blue");
+      letterElement.css("fontSize",50);
+   		letterElement.animate({"top":"95%"},5000 , function()
+   			{
+   				letterElement.show();
+   			});
+
+   	}
+   	$(document).on();
+   	setInterval(makeLetterFall,1000);
+    $(function(){
+    $("f1").draggable({axis :"x"});
+       
+});
+
+   </script>
+
+</head>
+<body>
+<footer><img src="buk.jpg" id="f1" class="ui-widget-content"> </footer>
+</body>
+</html>
